@@ -15,8 +15,6 @@ int TakeNum(int num)
         return result2;
 
     }
-    Console.WriteLine(num);
-    return num % 10;
 }
 int itog = TakeNum(new Random().Next(10, 99));
 
