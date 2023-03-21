@@ -16,6 +16,9 @@ void PrintArray(int[] array)
     Console.WriteLine();
 }
 
+
+
+
 int[] MassNums(int size,  int from, int to)
 {
     int[] arr = new int[size];
@@ -27,8 +30,29 @@ int[] MassNums(int size,  int from, int to)
     }
     return arr;
 }
-int num = int.Parse(console.ReadLine()!);
+int num = int.Parse(Console.ReadLine()!);
 int Start = int.Parse(Console.ReadLine()!);
 int stop = int.Parse(Console.ReadLine()!);
-int[] mass = EightMass(num, Start, stop);
-Print(mass);
+int[] mass = MassNums(num, Start, stop);
+PrintArray(mass);
+
+void SumPosNeg(int[] arr)
+{
+    int pos, neg;
+    pos = neg = 0;
+    for (int i = 0; i <arr.Length; i++)
+    {
+        if(arr[i] >0)
+        {
+            pos  += arr[i];
+        }
+        else
+        {
+            neg += arr[i];
+        }
+        Console.WriteLine($"Positive: {pos},negative: {neg} ");
+              
+    }
+
+}
+SumPosNeg(mass);
