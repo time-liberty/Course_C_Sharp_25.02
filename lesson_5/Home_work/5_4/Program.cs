@@ -1,7 +1,8 @@
-﻿//Задайте одномерный массив, заполненный случайными числами. 
-//Найдите сумму элементов, стоящих на нечётных позициях.
-//[3, 7, 23, 12] -> 19
-//[-4, -6, 89, 6] -> 0
+﻿//Найдите произведение пар чисел в одномерном массиве.
+//Парой считаем первый и последний элемент, второй и предпоследний
+//и т.д. Результат запишите в новом массиве.
+//[1 2 3 4 5] -> 5 8 3
+//[6 7 3 6] -> 36 21
 
 
 void PrintArray(int[] array)
@@ -31,13 +32,9 @@ int SumNegPos(int[] arr)
     int sum = 0;
     for (int i =0; i < arr.Length; i++)
     {
-        if ( i % 2 == 0)
-        {
-            sum = sum + arr[i];
-        }
+        arr[i] = arr[i] * (arr.Length- i-1);
     }
-    Console.WriteLine(sum);
-    return sum;
+    return arr;
 }
 
 Console.WriteLine("Введите количество чисел цикла");
@@ -49,3 +46,4 @@ int stop = int.Parse(Console.ReadLine()!);
 int[] mass = MassNums(num, Start, stop);
 PrintArray(mass);
 SumNegPos(mass);
+PrintArray(SumNegPos);
