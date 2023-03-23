@@ -14,22 +14,20 @@ void PrintArray(int[] array)
     Console.WriteLine();
 }
 
-int[] MassNums(int size, double from, double to)
+int MassNums(int size)
 {
     double[] arr = new double[size];
-    Random rnd = new Random();
 
-
-    for (double i = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
-        arr[i] = rnd.NextDouble() * (from - to) + to;
+        arr[i] = new Random().NextDouble();
+        Console.WriteLine($"{arr[i]}");
     }
-    return arr;
 }
-int poisk(int[] arr)
+double poisk(double[] arr)
 {
-    int max = 0;
-    int min = 0;
+    double max = arr[0];
+    double min = arr[0];
     for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i] > i)
@@ -41,10 +39,7 @@ int poisk(int[] arr)
             min = arr[i];
         }
     }
-    int res = max - min;
-    Console.WriteLine(res);
-    return max;
-    return min;
+    return max - min;
 }
 Console.WriteLine("Введите количество чисел цикла");
 int num = int.Parse(Console.ReadLine()!);
@@ -52,6 +47,6 @@ Console.WriteLine("Введите число начала цикла");
 int Start = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите число конца цикла");
 int stop = int.Parse(Console.ReadLine()!);
-int[] mass = MassNums(num, Start, stop);
+int[] mass = MassNums(num);
 PrintArray(mass);
 poisk(mass);

@@ -27,16 +27,15 @@ int[] MassNums(int size,int from, int to)
     }
     return arr;
 }
-int SumNegPos(int[] arr)
+void SumNegPos(int[] arr, int size2)
 {
-    int sum = 0;
+    int[] array = new int[size2];
     for (int i =0; i < arr.Length; i++)
     {
-        arr[i] = arr[i] * (arr.Length- i-1);
+        array[i] = arr[i] * (arr.Length- i-1);
+        Console.Write($"{array[i]} ");
     }
-    return arr;
 }
-
 Console.WriteLine("Введите количество чисел цикла");
 int num = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите число начала цикла");
@@ -45,5 +44,5 @@ Console.WriteLine("Введите число конца цикла");
 int stop = int.Parse(Console.ReadLine()!);
 int[] mass = MassNums(num, Start, stop);
 PrintArray(mass);
-SumNegPos(mass);
-PrintArray(SumNegPos);
+int num_2 = num / 2;
+SumNegPos(mass, num_2);
