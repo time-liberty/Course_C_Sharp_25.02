@@ -14,7 +14,7 @@ void PrintArray(int[] array)
     Console.WriteLine();
 }
 
-int MassNums(int size)
+int[] MassNums(int size)
 {
     double[] arr = new double[size];
 
