@@ -29,7 +29,7 @@ int[] MassNums(int size,int from, int to)
 int SumNegPos(int[] arr)
 {
     int sum = 0;
-    for (int i =0; i < arr.Length; i++)
+    for (int i =0; i < arr.Length; i+=2)
     {
         if ( i % 2 == 0)
         {
