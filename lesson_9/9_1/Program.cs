@@ -3,7 +3,7 @@
 
 void ValuesSet(int N,int M)
 {
-if (N == M) return;
+if (M < N) return;
 ValuesSet(N, M-1);
 Console.Write($"{M} ");
 }

@@ -1,17 +1,13 @@
 ﻿// Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
-void TakeNum(int [] num)
+void TakeNum(int size)
 {
-    if ( num = 5)
-    {
-        if ((num[0]==num[4])&&(num[1]==num[3]))
-        {
-            Console.WriteLine("yes");
-        }
-        else
-        {
-            Console.WriteLine("no");
-        }
-    }
+    int[] arr = new int[size];
+    if (arr[0]==arr[4] || arr[1]==arr[3])
+    Console.WriteLine("Является полидромом");
+   else
+     Console.WriteLine("не является полидромом");
 }
-TakeNum(12821);
+Console.WriteLine("Введите число для проверки");
+int start = int.Parse(Console.ReadLine()!);
+TakeNum(start);
