@@ -13,9 +13,6 @@ void PrintArray(int[] array)
     Console.WriteLine();
 }
 
-
-
-
 int[] MassNums(int size,  int from, int to)
 {
     int[] arr = new int[size];
@@ -36,10 +33,6 @@ void RevMas(int[] arr)
     }
 
 }
-
-
-
-
 
 Console.WriteLine("Введите рфзмер цикла");
 int num = int.Parse(Console.ReadLine()!);
